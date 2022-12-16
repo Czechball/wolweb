@@ -116,21 +116,21 @@ function renderData() {
         editTemplate: function (value, item) { return "" },
         insertTemplate: function () { return "" }
     });
-    gridFields.push({
-        name: "control", type: "bscontrol", width: 100, editButton: true, deleteButton: true, modeSwitchButton: true,
-        headerTemplate: function () {
-            var grid = this._grid;
-            var isInserting = grid.inserting;
-            var $button = $("<button>").addClass("btn btn-info btn-sm device-insert-button")
-                .attr({ type: "button", title: "Add new Device" })
-                .html("<i class=\"fas fa-plus\"></i>NEW")
-                .on("click", function () {
-                    isInserting = !isInserting;
-                    grid.option("inserting", isInserting);
-                });
-            return "";
-        }
-    });
+    // gridFields.push({
+    //     name: "control", type: "bscontrol", width: 100, editButton: true, deleteButton: true, modeSwitchButton: true,
+    //     headerTemplate: function () {
+    //         var grid = this._grid;
+    //         var isInserting = grid.inserting;
+    //         var $button = $("<button>").addClass("btn btn-info btn-sm device-insert-button")
+    //             .attr({ type: "button", title: "Add new Device" })
+    //             .html("<i class=\"fas fa-plus\"></i>NEW")
+    //             .on("click", function () {
+    //                 isInserting = !isInserting;
+    //                 grid.option("inserting", isInserting);
+    //             });
+    //         return "";
+    //     }
+    // });
 
     $("#GridDevices").jsGrid({
         height: "auto",
