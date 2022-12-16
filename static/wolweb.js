@@ -62,46 +62,27 @@ function renderData() {
 
         _createInsertButton: function () {
             var grid = this._grid;
-            return $("<button>").addClass("btn btn-dark btn-sm")
-                .attr({ type: "button", title: "Add this device to the list." })
-                .html("<i class=\"fas fa-save\"></i>SAVE")
-                .on("click", function () {
-                    grid.insertItem().done(function () {
-                        grid.clearInsert();
-                    });
-                });
+            return "";
         },
 
         _createEditButton: function (item) {
             var grid = this._grid;
-            return $("<button class=\"btn btn-sm btn-light m-0 p-1\" title=\"" + this.editButtonTooltip + "\">").append("<i class=\"fas fa-edit bs-grid-button text-success m-0 p-0\">").click(function (e) {
-                grid.editItem(item);
-                e.stopPropagation();
-            });
+            return "";
         },
 
         _createDeleteButton: function (item) {
             var grid = this._grid;
-            return $("<button class=\"btn btn-sm btn-light m-0 ml-1 p-1\" title=\"" + this.deleteButtonTooltip + "\">").append("<i class=\"fas fa-trash-alt bs-grid-button text-danger m-0 p-0\">").click(function (e) {
-                grid.deleteItem(item);
-                e.stopPropagation();
-            });
+            return "";
         },
 
         _createUpdateButton: function () {
             var grid = this._grid;
-            return $("<button class=\"btn btn-sm btn-light m-0 ml-1 p-1\" title=\"" + this.updateButtonTooltip + "\">").append("<i class=\"fas fa-save bs-grid-button text-success m-0 p-0\">").click(function (e) {
-                grid.updateItem();
-                e.stopPropagation();
-            });
+            return "";
         },
 
         _createCancelEditButton: function () {
             var grid = this._grid;
-            return $("<button class=\"btn btn-sm btn-light m-0 ml-1 p-1\" title=\"" + this.cancelEditButtonTooltip + "\">").append("<i class=\"fas fa-window-close bs-grid-button text-danger m-0 p-0\">").click(function (e) {
-                grid.cancelEdit();
-                e.stopPropagation();
-            });
+            return "";
         },
 
     });
@@ -147,7 +128,7 @@ function renderData() {
                     isInserting = !isInserting;
                     grid.option("inserting", isInserting);
                 });
-            return $button;
+            return "";
         }
     });
 
